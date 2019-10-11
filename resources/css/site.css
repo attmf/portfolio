@@ -2,37 +2,53 @@ body{
     color: #3b3b3b;
     overflow-x: hidden;
 }
+
+a{
+    color:inherit;
+}
+
 .icon-menu{
     color: #bbb;
     font-size: 1.5em;
 }
-.icon-menu:hover{
-    color: #b10000;
+
+.icon-menu:hover, .footer-icon:hover, .active{
+    /* color: #b10000; */
+    color: #111111;
 }
+
 .lateral-menu{
     z-index: 2000;
 }
-.lateral-menu nav{
+
+.lateral-menu .desk-menu{
     width: 4em;
     transition:all 0.3s ease;
 }
-.lateral-menu nav:hover{
-    width: 12em;
+
+.lateral-menu .desk-menu:hover, .anim{
+    display: flex!important;
+    width: 13em!important;
     text-align: left!important;
 }
+
 .bg-gray{
     background-color: #eee;
 }
+
 .job-img{
     width: 100%;
 }
+
 .job-card p{
     color: #3b3b3b;
     text-align: center;
 }
+
 .job-card{
     transition:all 0.3s ease;
 }
+
 .job-card:hover{
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -48,14 +64,9 @@ body{
     margin: 0;
 }
 
-.active{
-    color: #b10000;
-}
-
 .banner{
     background-image: url('../images/banner_2.png');
     background-position: center center;
-    background-size: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     height: 100vh;
@@ -74,6 +85,78 @@ body{
     flex-direction: row;
     text-align: center;
 }
+
 .me{
     width: 100%;
 }
+
+.link-icon:hover{
+    color: #4875B4;
+}
+
+.what-icon:hover{
+    color: #25d366;
+}
+
+.git-icon:hover{
+    color: #333;
+}
+
+.social-icon div i{
+    color: #bbb;
+}
+
+.font-small{
+    font-size: 0.9em;
+}
+
+#contact{
+    background-image: url('../images/contact-bg.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: 100% 100%;
+    color: #fff;
+}
+
+.social-icon .bg-social-icon{
+    position: absolute;
+}
+
+.social-icon:hover .bg-social-icon{
+    background: white;
+    position: absolute;
+    top: 43px;
+    border-radius: 15px;
+    display: block;
+    width: 47px;
+    height: 47px;
+    z-index: -1;
+    margin: 1px;
+}
+
+.mobile-menu{
+    z-index: 2001;
+}
+
+.mobile-text{
+    color: #b1b1b1;
+    font-size: 1.1em;
+}
+
+.bg-trans-white{
+    background-color: rgba(255, 255, 255, .9);
+}
+
+/* Hamburguer bar mobile */
+
+
+/* Hamburguer bar mobile final*/
+
+@media only screen and (max-width: 600px) {
+    .social-icon:hover .bg-social-icon{
+        top: 67px;
+    }
+    .anim{
+        width: 100vw!important;
+    }
+  }

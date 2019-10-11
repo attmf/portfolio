@@ -7,15 +7,26 @@
     <title>Anderson Dev</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="resources/css/site.css">
+    <link rel="stylesheet" href="resources/css/hamb.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <script src="https://kit.fontawesome.com/b3f968332f.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="resources/js/scroll.js"></script>
+    <script src="resources/js/menu.js" defer></script>
 </head>
 <body>
     <header>
-        <aside class="bg-white position-fixed animated fadeInLeftBig lateral-menu overflow-hidden">
-            <nav class="nav flex-column d-flex justify-content-center vh-100" id="lateral-menu">
+        <nav class="nav mobile-menu vw-100 py-2 position-fixed bg-trans-white d-flex d-md-none d-lg-none d-sm-flex animated">
+            <div class="container d-flex justify-content-between">
+                <a class="nav-item " href="#" id="hamburguer">
+                        <span></span>
+                        <span></span>
+                        <span></span></a>
+                <a class="nav-item float-right mobile-text" href="#contact">Anderson Developer</a>
+            </div>
+        </nav>
+        <aside class="bg-white position-fixed lateral-menu overflow-hidden d-none d-md-flex d-lg-flex animated slideInLeft" id="lateral-menu">
+            <nav class="nav flex-column justify-content-center vh-100 desk-menu">
                 <a class="nav-link py-4 icon-menu d-flex align-items-center text-center d-flex justify-content-between active" id="home-link" href="#home">
                     <div><i class="fas fa-home"></i></div>
                     <div class="ml-4">Home</div>
@@ -42,13 +53,13 @@
                     <div class="intro-msg animated fadeInUp">
                         <div>
                             <p class="h1">Anderson Dev</p>
-                            <p class="h5">Aqui você poderá ver todos os projetos que já trabalhei e também minhas experiências.</p>
+                            <p class="h5">Aqui você poderá ver todos os projetos em que já trabalhei e também minhas experiências como um Full-Stack Developer.</p>
                         </div>
                     </div>
                 </div>
             </section>
-            <div class="container">         
-                <section class="min-vh-100 py-4" id="about">
+            <section class="min-vh-100 py-4" id="about">
+                <div class="container">
                     <p class="h2 text-center animated fadeInDown">About Me</p>
                     <div class="row">
                         <div class="col-lg-4">
@@ -58,8 +69,10 @@
                             <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae mollitia dignissimos dicta reprehenderit itaque, omnis magni minima natus! Cum enim debitis est quisquam culpa nulla provident vitae iure iste. Ducimus!</p>
                         </div>
                     </div>
-                </section>
-                <section class="min-vh-100 py-4" id="projects">
+                </div>
+            </section>
+            <section class="min-vh-100 py-2 min-vh-100" id="projects">
+                <div class="container">
                     <p class="h2 text-center animated fadeInDown">Projects</p>
                     <div class="row d-flex justify-content-around animated fadeInUp">
                         <div class="p-1 col-lg-4">
@@ -99,21 +112,70 @@
                             </div>
                         </div>
                     </div>
-                </section>
-                <section id="contact">
-                    
-                </section>
-            </div>
+                </div>
+            </section>
+            <section class="animated fadeInUp py-2 bg-light min-vh-100 d-flex align-items-center" id="contact">
+                <div class="container">
+                    <p class="h2 text-center mb-3">Contact</p>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 py-2">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Email address</label>
+                                    <input type="email" class="form-control" id="formEmail" placeholder="name@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Name</label>
+                                    <input type="email" class="form-control" id="formName" placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Message</label>
+                                    <textarea class="form-control" id="formMessage" rows="5"></textarea>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button type="submit" class="btn btn-light">Submit</button>
+                                    <button type="reset" class="btn btn-light">Reset</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 py-2">
+                            <p class="h5 text-center">Or you can find me on my social networks.</p>
+                            <div class="d-flex justify-content-around">
+                                <a href="#">
+                                    <div class="social-icon"><div class="bg-social-icon"></div><i class="fab fa-linkedin display-4 link-icon"></i></div>
+                                </a>
+                                <a href="#">
+                                    <div class="social-icon"><div class="bg-social-icon"></div><i class="fab fa-whatsapp-square display-4 what-icon"></i></div>
+                                </a>
+                                <a href="#">
+                                    <div class="social-icon"><div class="bg-social-icon"></div><i class="fab fa-github-square display-4 git-icon"></i></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
-    <footer>
-        <div class="container">
+    <footer class="text-center">
+        <div class="bg-white">
             <div class="row">
-                <div class="col-3">
-
+                <div class="col-lg-3 col-md-6 col-lg-12">
+                    <!-- <nav class="nav flex-column">
+                        <a class="nav-item" href="#">Home</a>
+                        <a class="nav-item" href="#">About Me</a>
+                        <a class="nav-item" href="#">My Projects</a>
+                        <a class="nav-item" href="#">Contact</a>
+                    </nav> -->
                 </div>
-                <div class="col-6">
-
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    
+                </div>
+            </div>
+            <div class="container">
+                <div class="row p-2 d-flex justify-content-between">
+                    <p class="m-0 font-small my-2">Made with <i class="fas fa-heart footer-icon"></i> & <i class="fas fa-coffee footer-icon"></i> in my sweet home.</p>
+                    <p class="m-0 font-small my-2">Copyright © 2019 - Anderson Developer. All rights reserved.</p>
                 </div>
             </div>
         </div>
