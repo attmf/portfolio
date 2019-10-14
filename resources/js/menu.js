@@ -17,6 +17,14 @@ let click = false;
 //     }
 // });
 
+for(i = 0; i < navLink.length;i++) {
+    navLink[i].addEventListener('click', function(){
+        menuLateral.classList.remove('anim');
+        btnHamb.classList.remove('open');
+        click = false;
+    });
+  }
+
 btnHamb.addEventListener("click", function(e) {
     if(click == false){
         menuLateral.classList.add('anim');
@@ -30,5 +38,6 @@ btnHamb.addEventListener("click", function(e) {
         click = false;
     }
 });
+
 
 
