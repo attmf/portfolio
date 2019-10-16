@@ -1,6 +1,7 @@
 body{
     color: #3b3b3b;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 a{
@@ -10,6 +11,7 @@ a{
 .icon-menu{
     color: #bbb;
     font-size: 1.5em;
+    cursor: pointer;
 }
 
 .icon-menu:hover, .footer-icon:hover, .active{
@@ -49,11 +51,43 @@ a{
     transition:all 0.3s ease;
 }
 
-.job-card:hover{
+.job-card:hover, .job-card-active{
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
     box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+    z-index: 2;
+    transition:all 0.3s ease;
+}
+
+.job-card-active{
+    position: absolute;
+}
+
+.bg-focus{
+    background: rgba(0, 0, 0, .8);
+    position: absolute;
+    top: 0;
+    /*left: -2em;*/
+    right: 0;
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 1;
+    color: white;
+    box-shadow: 0 30px 25px rgba(0,0,0,0.8);
+}
+.job-resume{
+    background: rgba(0, 0, 0, .8);
+    position: absolute;
+    top: 0;
+    left: -2em;
+    right: 0;
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 1;
+    color: white;
+    box-shadow: 0 30px 25px rgba(0,0,0,0.8);
+    width: 120vw;
 }
 
 .p-0{
@@ -147,6 +181,11 @@ a{
     background-color: rgba(255, 255, 255, .9);
 }
 
+#btnClose{
+    z-index:5;
+    right: 0;
+}
+
 /* Hamburguer bar mobile */
 
 
@@ -158,5 +197,10 @@ a{
     }
     .anim{
         width: 100vw!important;
+    }
+    .job-resume{
+        top: 22em;
+        left: 0.95em;
+        width: 100vw;
     }
   }

@@ -47,11 +47,12 @@
         </aside>
     </header>
     <main>
-        <div class="bg-light">
+        
+        <div class="bg-light position-relative">
             <section id="home">
                 <div class="banner d-flex justify-content-center align-items-center vw-100 vh-100">
-                    <div class="intro-msg animated fadeInUp">
-                        <div>
+                    <div class="intro-msg">
+                        <div class="container">
                             <p class="h1">Anderson Dev</p>
                             <p class="h5">Aqui você poderá ver todos os projetos em que já trabalhei e também minhas experiências como um Full-Stack Developer.</p>
                         </div>
@@ -62,53 +63,87 @@
                 <div class="container">
                     <p class="h2 text-center animated fadeInDown">About Me</p>
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
                             <img class="me" src="resources/images/3.jpg">
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-6 col-sm-12">
                             <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae mollitia dignissimos dicta reprehenderit itaque, omnis magni minima natus! Cum enim debitis est quisquam culpa nulla provident vitae iure iste. Ducimus!</p>
                         </div>
                     </div>
                 </div>
             </section>
+            
             <section class="min-vh-100 py-2 min-vh-100" id="projects">
                 <div class="container">
                     <p class="h2 text-center animated fadeInDown">Projects</p>
+                    <div class="bg-focus vw-100 vh-100 position-fixed">
+                        <i class="fas fa-times float-right icon-menu p-4 btnClose"></i>
+                    </div>
                     <div class="row d-flex justify-content-around animated fadeInUp">
-                        <div class="p-1 col-lg-4">
+                        <div class="p-1 col-lg-4 col-md-6 col-sm-12" id="job-card">
                             <div class="job-card bg-white m-4">
                                 <img class="job-img" src="resources/images/1.jpg">
                                 <p class="p-3 m-0">Lorem ipsum dolor</p>
                             </div>
+                            <div class="job-resume p-4 vh-100 row">
+                                <i class="fas fa-times icon-menu p-4 position-absolute r-0 l-0" id="btnClose"></i>
+                                <div class="col-lg-6 col-md-8 col-sm-12"></div>
+                                <p class="col-lg-6 col-md-4 col-sm-12 m-auto container">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident fugit aliquid ullam magnam rerum, qui quod, repellat quibusdam laborum numquam repudiandae dolore porro sed quasi voluptatem cupiditate consequuntur est nostrum?</p>
+                            </div>
                         </div>
-                        <div class="p-1 col-lg-4">
-                            <div class="job-card bg-white m-4">
+                        <div class="p-1 col-lg-4 col-md-6 col-sm-12">
+                            <div class="job-card bg-white m-4 position-relative">
                                 <img class="job-img" src="resources/images/2.jpg">
                                 <p class="p-3 m-0">Lorem ipsum dolor</p>
                             </div>
+                            <div class="job-resume p-4 vh-100 row">
+                                <i class="fas fa-times float-right icon-menu p-4" id="btnClose"></i>
+                                <div class="col-lg-6 m-4 p-4"></div>
+                                <p class="col-lg-6 col-md-6 col-sm-12 m-auto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident fugit aliquid ullam magnam rerum, qui quod, repellat quibusdam laborum numquam repudiandae dolore porro sed quasi voluptatem cupiditate consequuntur est nostrum?</p>
+                            </div>
                         </div>
-                        <div class="p-1 col-lg-4">
-                            <div class="job-card bg-white m-4">
+                        <div class="p-1 col-lg-4 col-md-6 col-sm-12">
+                            <div class="job-card bg-white m-4 position-relative">
                                 <img class="job-img" src="resources/images/3.jpg">
                                 <p class="p-3 m-0">Lorem ipsum dolor</p>
                             </div>
+                            <div class="job-resume p-4 vh-100 row">
+                                <i class="fas fa-times float-right icon-menu p-4" id="btnClose"></i>
+                                <div class="col-lg-6 m-4 p-4"></div>
+                                <p class="col-lg-6 col-md-6 col-sm-12 m-auto container">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident fugit aliquid ullam magnam rerum, qui quod, repellat quibusdam laborum numquam repudiandae dolore porro sed quasi voluptatem cupiditate consequuntur est nostrum?</p>
+                            </div>
                         </div>
-                        <div class="p-1 col-lg-4">
-                            <div class="job-card bg-white m-4">
+                        <div class="p-1 col-lg-4 col-md-6 col-sm-12">
+                            <div class="job-card bg-white m-4 position-relative">
                                 <img class="job-img" src="resources/images/1.jpg">
                                 <p class="p-3 m-0">Lorem ipsum dolor</p>
                             </div>
+                            <div class="job-resume p-4 vh-100 row">
+                                <i class="fas fa-times float-right icon-menu p-4" id="btnClose"></i>
+                                <div class="col-lg-6 m-4 p-4"></div>
+                                <p class="col-lg-6 col-md-6 col-sm-12 m-auto container">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident fugit aliquid ullam magnam rerum, qui quod, repellat quibusdam laborum numquam repudiandae dolore porro sed quasi voluptatem cupiditate consequuntur est nostrum?</p>
+                            </div>
                         </div>
-                        <div class="p-1 col-lg-4">
-                            <div class="job-card bg-white m-4">
+                        <div class="p-1 col-lg-4 col-md-6 col-sm-12">
+                            <div class="job-card bg-white m-4 position-relative">
                                 <img class="job-img" src="resources/images/2.jpg">
                                 <p class="p-3 m-0">Lorem ipsum dolor</p>
                             </div>
+                            <div class="job-resume p-4 vh-100 row">
+                                <i class="fas fa-times float-right icon-menu p-4" id="btnClose"></i>
+                                <div class="col-lg-6 m-4 p-4"></div>
+                                <p class="col-lg-6 col-md-6 col-sm-12 m-auto container">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident fugit aliquid ullam magnam rerum, qui quod, repellat quibusdam laborum numquam repudiandae dolore porro sed quasi voluptatem cupiditate consequuntur est nostrum?</p>
+                            </div>
                         </div>
-                        <div class="p-1 col-lg-4">
-                            <div class="job-card bg-white m-4">
+                        <div class="p-1 col-lg-4 col-md-6 col-sm-12">
+                            <div class="job-card bg-white m-4 position-relative">
                                 <img class="job-img" src="resources/images/3.jpg">
                                 <p class="p-3 m-0">Lorem ipsum dolor</p>
+                            </div>
+                            <div class="job-resume p-4 vh-100 row">
+                                <i class="fas fa-times float-right icon-menu p-4" id="btnClose"></i>
+                                <div class="col-lg-6 m-4 p-4"></div>
+                                <p class="col-lg-6 col-md-6 col-sm-12 m-auto container">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident fugit aliquid ullam magnam rerum, qui quod, repellat quibusdam laborum numquam repudiandae dolore porro sed quasi voluptatem cupiditate consequuntur est nostrum?</p>
                             </div>
                         </div>
                     </div>
