@@ -60,10 +60,6 @@ a{
     transition:all 0.3s ease;
 }
 
-.job-card-active{
-    position: absolute;
-}
-
 .bg-focus{
     background: rgba(0, 0, 0, .8);
     position: absolute;
@@ -77,7 +73,7 @@ a{
     box-shadow: 0 30px 25px rgba(0,0,0,0.8);
 }
 .job-resume{
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, .9);
     position: absolute;
     top: 0;
     left: -2em;
@@ -86,7 +82,7 @@ a{
     transition: all 0.3s ease;
     z-index: 1;
     color: white;
-    box-shadow: 0 30px 25px rgba(0,0,0,0.8);
+    box-shadow: 0 30px 25px rgba(0,0,0,0.9);
     width: 120vw;
 }
 

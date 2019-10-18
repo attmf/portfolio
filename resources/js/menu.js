@@ -2,11 +2,12 @@ let btnHamb = document.getElementById('hamburguer');
 let menuLateral = document.getElementById('lateral-menu');
 let navLink = document.querySelectorAll('.nav-link');
 let jobCard = document.querySelectorAll('.job-card');
-let jobResume = document.getElementsByClassName('job-resume');
+let jobResume = document.querySelectorAll('.job-resume');
 let bgFocus = document.getElementsByClassName('.job-resume');
-let btnClose = document.getElementById('btnClose');
+let btnClose = document.querySelectorAll('#btnClose');
 let click = false;
 let jobCardFocus;
+let jobResumeFocus;
 
 // document.addEventListener("click", function(e) {
 //     if (!menuLateral == e.target && !btnHamb == e.target && click == true) {
@@ -30,18 +31,34 @@ for(i = 0; i < navLink.length;i++) {
     });
 }
 
-for(i = 0; i < jobCard.length;i++) {
-    jobCard[i].addEventListener('click', function(){
-        this.classList.add('job-card-active');
+// for(i = 0; i < jobCard.length;i++) {
+//     jobCard[i].addEventListener('click', function(){
+//         this.classList.add('job-card-active');
+//         jobCardFocus = this;
+//         jobResume[0].classList.add('d-block');
+//     });
+// }
+
+for(i = 0; i < jobCard.length; i++) {
+    jobCard[i].setAttribute('data-i', i);
+
+    jobCard[i].addEventListener('click', function() {
+        const idx = this.getAttribute('data-i');
+        
+        // Alterei o add pelo toggle
         jobCardFocus = this;
-        jobResume[0].classList.add('d-block');
+        jobResumeFocus = jobResume[idx];
+        this.classList.toggle('job-card-active');
+        jobResume[idx].classList.toggle('d-block');
     });
 }
 
-btnClose.addEventListener("click", function(e) {
-    jobResume[0].classList.remove('d-block');
-    jobCardFocus.classList.remove('job-card-active');
-});
+for(i = 0; i < btnClose.length;i++) {
+    btnClose[i].addEventListener('click', function(){
+        jobResumeFocus.classList.remove('d-block');
+        jobCardFocus.classList.remove('job-card-active');
+    });
+}
 
 btnHamb.addEventListener("click", function(e) {
     if(click == false){
